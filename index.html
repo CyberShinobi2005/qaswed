@@ -1,0 +1,150 @@
+html
+
+Verify
+
+Open In Editor
+Edit
+Run
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Greeting Card</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff5722;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .diwali-lights {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .light {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 10px;
+            animation: blink 1s infinite;
+        }
+
+        .red { background-color: #ff0000; }
+        .yellow { background-color: #ffff00; }
+        .green { background-color: #00ff00; }
+        .blue { background-color: #0000ff; }
+        .purple { background-color: #800080; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .dancer {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+        .body {
+            width: 20px;
+            height: 50px;
+            background-color: #000;
+            position: absolute;
+            top: 25px;
+            left: 40px;
+            animation: dance 1s infinite;
+        }
+
+        .arms {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .arm {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            position: absolute;
+        }
+
+        .left { left: 0; animation: arm-left 1s infinite; }
+        .right { left: 40px; animation: arm-right 1s infinite; }
+
+        .legs {
+            position: absolute;
+            top: 70px;
+            left: 30px;
+        }
+
+        .leg {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            position: absolute;
+        }
+
+        .leg.left { left: 0; animation: leg-left 1s infinite; }
+        .leg.right { left: 40px; animation: leg-right 1s infinite; }
+
+        @keyframes dance {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes arm-left {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(30deg); }
+        }
+
+        @keyframes arm-right {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-30deg); }
+        }
+
+        @keyframes leg-left {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(30deg); }
+        }
+
+        @keyframes leg-right {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-30deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Diwali Vishal!</h1>
+    <div class="diwali-lights">
+        <div class="light red"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
+        <div class="light blue"></div>
+        <div class="light purple"></div>
+    </div>
+    <div class="dancer">
+        <div class="body"></div>
+        <div class="arms">
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+        </div>
+        <div class="legs">
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+        </div>
+    </div>
+</body>
+</html>
